@@ -26,6 +26,10 @@
             android:name=".unity.UnityHostActivity"
             android:exported="false"
             android:theme="@style/BaseUnityGameActivityTheme" />
+        <!-- Remove library's launcher so only MainActivity receives app icon launches -->
+        <activity
+            android:name="com.unity3d.player.UnityPlayerGameActivity"
+            tools:node="remove" />
     </application>
 
 </manifest>
