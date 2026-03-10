@@ -120,17 +120,15 @@ class UnityHostActivity : UnityPlayerGameActivity() {
     }
 }
 
-fun copyTestMotionToInternalStorage(context: Context): String {
+private fun copyTestMotionToInternalStorage(context: Context): String {
     val fileName = "test_motion.json"
-    val outFile = File(context.filesDir, fileName)
+    val file = File(context.filesDir, fileName)
 
-    if (!outFile.exists()) {
-        context.assets.open(fileName).use { input ->
-            outFile.outputStream().use { output ->
-                input.copyTo(output)
-            }
+    context.assets.open(fileName).use { input ->
+        file.outputStream().use { output ->
+            input.copyTo(output)
         }
     }
 
-    return outFile.absolutePath
+    return file.absolutePath
 }
