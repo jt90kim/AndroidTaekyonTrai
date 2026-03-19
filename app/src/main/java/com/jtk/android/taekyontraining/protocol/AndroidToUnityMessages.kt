@@ -15,6 +15,8 @@ object AndroidToUnityMessages {
 
     const val STOP_SESSION = "STOP_SESSION"
 
+    const val KICK = "KICK"
+
     const val SET_HOLD_PREFIX = "SET_HOLD:"
     const val RELEASE_HOLD = "RELEASE_HOLD"
 }

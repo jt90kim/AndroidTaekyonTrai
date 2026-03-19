@@ -81,19 +81,19 @@ class UnityHostActivity : UnityPlayerGameActivity() {
             )
         }
 
-//        binding.btnSetHold.setOnClickListener {
-//            UnityBridge.sendMessage(
-//                "AndroidBridge",
-//                "ReceiveMessage",
-//                "SET_HOLD:1"
-//            )
-//        }
-//
         binding.btnReleaseHold.setOnClickListener {
             UnityBridge.sendMessage(
                 "AndroidBridge",
                 "ReceiveMessage",
                 "RELEASE_HOLD"
+            )
+        }
+
+        binding.btnKick.setOnClickListener {
+            UnityBridge.sendMessage(
+                "AndroidBridge",
+                "ReceiveMessage",
+                AndroidToUnityMessages.KICK
             )
         }
 
