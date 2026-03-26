@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="8dp"
-            android:text="Seek 1" />
+            android:text="trigger" />
 
 <!--        <Button-->
 <!--            android:id="@+id/btnSetHold"-->
@@ -69,11 +69,12 @@
 <!--            android:layout_height="wrap_content"/>-->
 
         <Button
-            android:id="@+id/btnReleaseHold"
-            android:text="Release"
+            android:id="@+id/btnStep"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content"/>
+            android:layout_marginStart="8dp"
+            android:text="Step" />
 
         <Button
             android:id="@+id/btnKick"
@@ -82,5 +83,13 @@
             android:layout_weight="1"
             android:layout_marginStart="8dp"
             android:text="KICK" />
+
+        <Button
+            android:id="@+id/btnDrill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Drill" />
     </LinearLayout>
 </LinearLayout>

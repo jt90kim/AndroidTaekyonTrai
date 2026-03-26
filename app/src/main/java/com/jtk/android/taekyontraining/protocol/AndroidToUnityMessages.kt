@@ -17,6 +17,19 @@ object AndroidToUnityMessages {
 
     const val KICK = "KICK"
 
+    const val STEP = "STEP"
+
+    val DRILL_MESSAGE = """
+{
+  "type": "DRILL",
+  "sequence": [
+    { "action": "STEP", "delayMin": 0.2, "delayMax": 0.5 },
+    { "action": "KICK", "waitForTrigger": true },
+    { "action": "STEP", "waitForTrigger": true }
+  ]
+}
+""".trimIndent()
+
     const val SET_HOLD_PREFIX = "SET_HOLD:"
     const val RELEASE_HOLD = "RELEASE_HOLD"
 }

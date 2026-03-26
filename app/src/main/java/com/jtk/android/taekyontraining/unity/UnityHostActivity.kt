@@ -77,15 +77,16 @@ class UnityHostActivity : UnityPlayerGameActivity() {
             UnityBridge.sendMessage(
                 "AndroidBridge",
                 "ReceiveMessage",
-                "SEEK_FRAME:0"
+//                "SEEK_FRAME:0"
+                "TRIGGER"
             )
         }
 
-        binding.btnReleaseHold.setOnClickListener {
+        binding.btnStep.setOnClickListener {
             UnityBridge.sendMessage(
                 "AndroidBridge",
                 "ReceiveMessage",
-                "RELEASE_HOLD"
+                AndroidToUnityMessages.STEP
             )
         }
 
@@ -94,6 +95,14 @@ class UnityHostActivity : UnityPlayerGameActivity() {
                 "AndroidBridge",
                 "ReceiveMessage",
                 AndroidToUnityMessages.KICK
+            )
+        }
+
+        binding.btnDrill.setOnClickListener {
+            UnityBridge.sendMessage(
+                "AndroidBridge",
+                "ReceiveMessage",
+                AndroidToUnityMessages.DRILL_MESSAGE
             )
         }
 
